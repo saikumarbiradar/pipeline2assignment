@@ -1,8 +1,7 @@
 pipeline {
-			agent none 
+			agent any 
 			stages {
 				stage('BUILD') {
-					agent { label 'javaserver' }
 					steps {
 						sh '''
 							pwd
@@ -13,7 +12,6 @@ pipeline {
 				}
 				
 				stage('TEST') {
-					agent { label 'cserver' }
 					steps {
 						sh '''
 							pwd
@@ -24,7 +22,6 @@ pipeline {
 				}
         				
 				stage('DEPLOY') {
-					agent { label 'master' }
 					steps {
 						sh '''
 							pwd
