@@ -25,10 +25,9 @@ pipeline {
 					steps {
 						sh '''
 							pwd
-		
-
 							sleep 5
-							echo 				'''
+							echo This is the deploy stage: Deploy				
+						'''
 			}	
 		}
 	}
